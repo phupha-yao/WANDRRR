@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Background & Surface Colors */
+    --background: 220 25% 98%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Primary - Travel Blue */
+    --primary: 210 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 85% 65%;
+    --primary-dark: 210 85% 40%;
+
+    /* Secondary - Sunset Orange */
+    --secondary: 25 95% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 25 95% 75%;
+
+    /* Accent - Adventure Coral */
+    --accent: 340 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Muted Colors */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Destructive */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 210 85% 50%;
+
+    /* Border Radius */
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-sunset: linear-gradient(135deg, hsl(25, 95%, 60%) 0%, hsl(340, 85%, 60%) 100%);
+    --gradient-ocean: linear-gradient(135deg, hsl(210, 85%, 50%) 0%, hsl(195, 85%, 55%) 100%);
+    --gradient-twilight: linear-gradient(180deg, hsl(210, 85%, 50%) 0%, hsl(260, 65%, 45%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(210 85% 50% / 0.15);
+    --shadow-medium: 0 8px 30px -6px hsl(210 85% 50% / 0.25);
+    --shadow-glow: 0 0 40px hsl(210 85% 50% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 210 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 85% 70%;
+    --primary-dark: 210 85% 45%;
+
+    --secondary: 25 95% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 25 95% 80%;
+
+    --accent: 340 85% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 220 25% 18%;
+    --muted-foreground: 220 10% 65%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 25% 18%;
+    --input: 220 25% 18%;
+    --ring: 210 85% 55%;
+
+    --shadow-soft: 0 4px 20px -4px hsl(210 85% 50% / 0.2);
+    --shadow-medium: 0 8px 30px -6px hsl(210 85% 50% / 0.35);
+    --shadow-glow: 0 0 40px hsl(210 85% 50% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
